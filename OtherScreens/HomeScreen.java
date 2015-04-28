@@ -56,7 +56,7 @@ public class HomeScreen extends JPanel {
 				+ "some stress free fun!)<br><br>"
 				+ "-- Regardless, answer all questions wisely! And know that recycling benefits both "
 				+ "land and sea!<br><br>"
-				+ "-- Upon the game's completion, you will have the opportunity to review your learning with a "
+				+ "-- Upon the second game's completion, you will have the opportunity to review your learning with a "
 				+ "drag and drop quiz!</html>");
 		appInfoLabel.setFont(new Font("Courier", Font.PLAIN, 18));
 		appInfoLabel.setForeground(Color.WHITE);

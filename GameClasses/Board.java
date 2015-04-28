@@ -197,6 +197,14 @@ public class Board extends JPanel
 	}
 	
 	/*
+	 * getScore
+	 */
+	public int getTrashCollectedScore()
+	{
+		return trashCollectedScore;
+	}
+	
+	/*
 	 *  to manipulate setGameStarted variable
 	 */
 	public void setGameStarted(boolean hasGameStarted)

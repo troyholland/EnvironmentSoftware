@@ -1,7 +1,7 @@
 //
 // Project 4
 // Name: Alex, Jill, Nik, Troy
-// E-mail: akm77@georgetown.edu, jas502@georgetown.edu, tgh9@georgetown.edu
+// E-mail: akm77@georgetown.edu, jas502@georgetown.edu, nbo2@georgetown.edu, tgh9@georgetown.edu
 // Instructor: Singh
 // COSC 150
 //
@@ -18,6 +18,7 @@
 package MainApplet;
 
 import javax.swing.JApplet;
+import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
 import EarthQuestions.*;
@@ -77,6 +78,8 @@ public class AppletMain extends JApplet {
 		remove(newHome);
 		
 		newQ1 = new Q1Screen(myApplet, genericQPanel);
+		newQ1.setInitialPoints(); // initialize to 5
+		
 		add(newQ1);
 		
 		validate();
@@ -160,6 +163,9 @@ public class AppletMain extends JApplet {
 		validate();
 		repaint();
 		
+		// based on results of questions
+		JOptionPane.showMessageDialog(this, "Your Trash Requirement is " + intToPassToGame, 
+				"Your Duty!", JOptionPane.PLAIN_MESSAGE);
 	}
 
 	
@@ -167,6 +173,7 @@ public class AppletMain extends JApplet {
 	public void gameToq6() {
 		remove(newGame);
 
+		// changes background
 		genericQPanel.changeBackground();
 		newQ6 = new Q6Screen(myApplet, genericQPanel);
 		add(newQ6);
@@ -229,6 +236,9 @@ public class AppletMain extends JApplet {
 		remove(newQ10);
 		newQ10.remove(genericQPanel);
 
+		// don't incorporate 'points' into this game b/c the game could become too
+		// difficult, considering you have to pick up trash quickly and avoid the trash man
+		// at the same time. best to leave it at a static number you must reach
 		add(newGame);
 
 		validate();
@@ -245,12 +255,20 @@ public class AppletMain extends JApplet {
 		
 		validate();
 		repaint();
+		
+		// popup for completion
+        JOptionPane.showMessageDialog(this, "Congratulations! You have learned a lot today. Knowledge "
+        		+ "\nis power. And you are on your way to helping to save the "
+        		+ "\nworld! But before you go, let's see what you've learned!",
+    			"Review Opportunity", JOptionPane.PLAIN_MESSAGE);
 	}
 	
 	public void reviewToPurpose(){
 		remove(newReview);
 		
 		add(newPurpose);
+		
+		genericQPanel.changeBackground();
 		
 		validate();
 		repaint();

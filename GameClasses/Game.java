@@ -36,9 +36,6 @@ public class Game extends JPanel
 	 */
 	public Game(int difficulty, AppletMain myApplet)
 	{
-		// based on results of questions
-		JOptionPane.showMessageDialog(this, "Your Trash Requirement is " + difficulty, "Your Duty!", JOptionPane.PLAIN_MESSAGE);
-		
 		gameChoice = "";
 		
 		// board to played on
@@ -258,7 +255,7 @@ public class Game extends JPanel
 				+ "pollutes and carry it (one by one) to any garbage bin.</html>");
 		JLabel instLabel4= new JLabel("<html><br>3) However, if at any time, the ocean is polluted with <B>10</B> pieces of trash, "
 				+ "you lose!</html>");
-		JLabel instLabel5= new JLabel("<html><br>4) On yeah, don't let him get you!</html>");
+		JLabel instLabel5= new JLabel("<html><br>4) Oh yeah, don't let him get you!</html>");
 		JLabel instLabel6= new JLabel("<html><br>5) You must reach a score of 5! Your score is displayed at the top.</html>");
 		JLabel instLabel7= new JLabel("<html><br>6) Just remember, <B>we can't let the ocean Polluters win and pollute the ocean! We must"
 				+ " work to keep it clean!</B></html>");

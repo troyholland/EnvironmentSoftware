@@ -35,7 +35,7 @@ public class Q1Screen extends JPanel implements QInterface{
 	//to answering the questions incorrectly
 	//starts points at 5 as a default so that the user 
 	//has something to clean up for the game
-	private int points = 5;
+	public int points;
 
 	/**
 	 * public Q1Screen
@@ -74,11 +74,24 @@ public class Q1Screen extends JPanel implements QInterface{
 		submitButton.setFont(new Font("Courier", Font.PLAIN, 14));
 		//adds an actionListener to the JButton
 		submitButton.addActionListener(new toNextQButtonListener());
+		
+		// if button already present remove it for new one
+		if(genericPanel.qButtonPanel != null)
+			genericPanel.qButtonPanel.removeAll();
+		
 		//add the JButton to the panel
 		genericPanel.qButtonPanel.add(submitButton);
 
 		//add genericPanel to the screen
 		add(genericPanel);
+	}
+	
+	/*
+	 * intialize points
+	 */
+	public void setInitialPoints()
+	{
+		points = 5;
 	}
 
 	/**

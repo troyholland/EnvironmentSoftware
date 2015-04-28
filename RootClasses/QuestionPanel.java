@@ -102,7 +102,10 @@ public class QuestionPanel extends JPanel
 	// change when we want ocean background
 	public void changeBackground()
 	{
-		newBackground = true;
+		if(newBackground == false)
+			newBackground = true;
+		else if(newBackground == true)
+			newBackground = false;
 	}
 	
 	/*

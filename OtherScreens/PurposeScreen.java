@@ -53,7 +53,7 @@ public class PurposeScreen extends JPanel{
 		titleLabel.setHorizontalAlignment(JLabel.CENTER);
 		
 		// intro info
-		JLabel purposeLabel = new JLabel("<html>-- Let's learn about how <B>you</B> can protect<br>the earth!<br><br>"
+		JLabel purposeLabel = new JLabel("<html>-- Let's learn about how <B>YOU</B> can protect<br>the earth!<br><br>"
 				+ "-- How do our actions affect the Earth?<br><br>"
 				+ "-- Can we do anything to fight the consequences <br>of pollution?<br><br>"
 				+ "-- How important is <B>recycling</B> to our earth and its oceans?</html>");
